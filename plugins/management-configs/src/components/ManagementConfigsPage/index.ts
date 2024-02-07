@@ -1,0 +1,1 @@
+export { ManagementConfigsPage } from './ManagementConfigsPage';

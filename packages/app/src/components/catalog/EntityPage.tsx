@@ -27,6 +27,7 @@ import {
   isOrphan,
   hasRelationWarnings,
   EntityRelationWarning,
+  isResourceType,
 } from '@backstage/plugin-catalog';
 import {
   isGithubActionsAvailable,
@@ -57,6 +58,10 @@ import {
 
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
+
+import { RequirePermission } from '@backstage/plugin-permission-react';
+import { ManagementConfigsContent, ConfigType } from '@internal/plugin-management-configs';
+import { manegementConfigsEnvsReadPermission, manegementConfigsFeatureFlagReadPermission, manegementConfigsSecretsReadPermission } from '@internal/plugin-management-configs-common';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -377,6 +382,44 @@ const domainPage = (
   </EntityLayout>
 );
 
+const managementSecretsContent = (
+  <RequirePermission permission={manegementConfigsSecretsReadPermission}>
+    <ManagementConfigsContent title="KeyVault Secret List" type={ConfigType.Secret} />
+  </RequirePermission>
+);
+
+const managementEnvContent = (
+  <RequirePermission permission={manegementConfigsEnvsReadPermission}>
+    <ManagementConfigsContent title="AppConfiguration Env List" type={ConfigType.Env} />
+  </RequirePermission>
+);
+
+const managementFeatureFlagContent = (
+  <RequirePermission permission={manegementConfigsFeatureFlagReadPermission}>
+    <ManagementConfigsContent title="AppConfiguration FeatureFlag List" type={ConfigType.FeatureFlag} />
+  </RequirePermission>
+);
+
+const resourcePage = (
+  <EntityLayout>
+    <EntityLayout.Route path="/" title="Overview">
+      {overviewContent}
+    </EntityLayout.Route>
+
+    <EntityLayout.Route if={isResourceType('keyvault')} path="/management-secrets" title="Secrets">
+      {managementSecretsContent}
+    </EntityLayout.Route>
+
+    <EntityLayout.Route if={isResourceType('appconfiguration')} path="/management-envs" title="Envs">
+      {managementEnvContent}
+    </EntityLayout.Route>
+
+    <EntityLayout.Route if={isResourceType('appconfiguration')} path="/management-featureflags" title="Feature Flags">
+      {managementFeatureFlagContent}
+    </EntityLayout.Route>
+  </EntityLayout>
+);
+
 export const entityPage = (
   <EntitySwitch>
     <EntitySwitch.Case if={isKind('component')} children={componentPage} />
@@ -385,6 +428,7 @@ export const entityPage = (
     <EntitySwitch.Case if={isKind('user')} children={userPage} />
     <EntitySwitch.Case if={isKind('system')} children={systemPage} />
     <EntitySwitch.Case if={isKind('domain')} children={domainPage} />
+    <EntitySwitch.Case if={isKind('resource')} children={resourcePage} />
 
     <EntitySwitch.Case>{defaultEntityPage}</EntitySwitch.Case>
   </EntitySwitch>

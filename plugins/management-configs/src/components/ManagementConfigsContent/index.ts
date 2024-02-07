@@ -1,0 +1,1 @@
+export { ManagementConfigsContent } from './ManagementConfigsContent';

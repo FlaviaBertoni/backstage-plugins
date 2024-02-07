@@ -39,3 +39,38 @@ spec:
     message ExampleMessage {
       string example = 1;
     };
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: default-dvkeyvault
+  annotations: 
+    br.example.com/environment: dv
+spec:
+  type: keyvault
+  owner: user:default/guest
+  system: examples
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: default-dvappconfiguration
+  annotations: 
+    br.example.com/environment: dv
+spec:
+  type: appconfiguration
+  owner: user:default/guest
+  system: examples
+---
+# apiVersion: backstage.io/v1alpha1
+# kind: Resource
+# metadata:
+#   name: defaultstorageaccountdv 
+#   namespace: default
+#   description: storageaccount owned by the system examples
+#   annotations:
+#     br.example.com/environment: dv
+# spec:
+#   type: storageaccount
+#   owner: user:default/guest
+#   system: examples
