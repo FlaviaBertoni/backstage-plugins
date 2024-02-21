@@ -13,6 +13,7 @@ jest.mock('@backstage/core-plugin-api', () => ({
 jest.mock('../hooks/useConfig', () => ({
   useConfigUpdate: () => ({ update: jest.fn() }),
   useConfigCreate: () => ({ create: jest.fn() }),
+  useConfigGet: () => ({ getConfigValue: jest.fn() }),
 }));
 
 describe('ItemDrawer Component', () => {

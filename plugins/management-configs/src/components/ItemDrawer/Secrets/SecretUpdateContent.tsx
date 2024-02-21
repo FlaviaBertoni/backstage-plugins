@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 
 import { usePermission } from '@backstage/plugin-permission-react';
-import { manegementConfigsSecretsCreatePermission } from '@internal/plugin-management-configs-common';
+import { manegementConfigsSecretsCreatePermission, manegementConfigsSecretsShowValuePermission } from '@internal/plugin-management-configs-common';
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
-import { Grid } from '@material-ui/core';
+import { Grid, Button } from '@material-ui/core';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import Tooltip from '@mui/material/Tooltip';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
+import EditIcon from '@material-ui/icons/Edit';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 import { useConfigUpdate, useConfigGet } from '../../hooks/useConfig';
 
@@ -23,13 +26,17 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
   const { toggleDrawer, setItem } = props;
   const [loading, setLoading] = useState(false);
   const [showSecretValue, setShowSecretValue] = useState(false);
+  const [editing, setEditing] = useState(false);
   const [value, setValue] = useState(DEFAULT_SECRET_HIDE_VALUE);
 
   const alertApi = useApi(alertApiRef);
   const { update } = useConfigUpdate();
   const { getConfigValue } = useConfigGet();
   const createPermissionResult = usePermission({ permission: manegementConfigsSecretsCreatePermission });
+  const showSecretValuePermissionResult = usePermission({ permission: manegementConfigsSecretsShowValuePermission });
+
   const readOnly = !createPermissionResult?.allowed;
+  const showSecretValueAllowed = showSecretValuePermissionResult?.allowed;
 
   const item = { type: props.type, ...props.item } as Config;
   if (!item || !setItem) {
@@ -70,6 +77,17 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
     event.preventDefault();
   };
 
+  const handleEditValue = () => {
+    const isEditing = !editing;
+    setEditing(isEditing);
+
+    if (!isEditing) {
+      setItem({ ...item, value: '' });
+      setValue(DEFAULT_SECRET_HIDE_VALUE);
+      setShowSecretValue(false);
+    }
+  };
+
   const save = async () => {
     setLoading(true);
 
@@ -84,6 +102,45 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
     }
   };
 
+  const ReadInput = (
+    <TextField
+      id="item-value"
+      fullWidth
+      label="Value"
+      value={value}
+      InputProps={{ 
+        readOnly: true,
+        endAdornment: showSecretValueAllowed && (
+          <InputAdornment position="end">
+            <IconButton
+              aria-label="toggle visibility"
+              onClick={handleClickShow}
+              onMouseDown={handleMouseDownShow}
+              disabled={loading}
+              edge="end"
+            >
+              {showSecretValue ? <VisibilityIcon /> : <VisibilityOffIcon />}
+            </IconButton>
+          </InputAdornment>
+        )
+      }}
+    />
+  );
+
+  const EditInput = (
+    <TextField
+      id="editing-item-value"
+      fullWidth
+      multiline
+      label="New secret value"
+      value={item.value}
+      rows={3}
+      onChange={(e) =>
+        setItem({ ...item, value: e.target.value })
+      }
+    />
+  );
+
   return (
     <DrawerTemplateContent
       title="Details"
@@ -93,6 +150,7 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
       readOnly={readOnly}
       save={save}
       loading={loading}
+      disabledSave={!item.value}
     >
         <Grid container spacing={3} direction="column" data-testid="secret-update-content">
           <Grid item>
@@ -125,30 +183,30 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
             />
           </Grid>}
 
-          <Grid item>
-            <TextField
-                id="item-value"
-                fullWidth
-                label="Value"
-                value={value}
-                InputProps={{ 
-                  readOnly: true,
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={handleClickShow}
-                        onMouseDown={handleMouseDownShow}
-                        disabled={loading}
-                        edge="end"
-                      >
-                        {showSecretValue ? <Visibility /> : <VisibilityOff />}
-                      </IconButton>
-                    </InputAdornment>
-                  )
-                }}
-            />
+          <Grid item container spacing={1}>
+     
+            <Grid item xs={10}>
+              {editing ? EditInput : ReadInput }
+            </Grid>
+
+            <Grid item xs justifyContent="flex-end" alignItems="center">
+                <Tooltip title={editing ? "Cancel editing" : "Edit value"}>
+                  <Button
+                    data-testid="edit-button"
+                    aria-label="edit value"
+                    onClick={handleEditValue}
+                    variant="outlined"
+                    color="primary"
+                    style={{ height: '100%' }}
+                    fullWidth
+                  >
+                    { editing ? <CancelIcon /> : <EditIcon /> }
+                  </Button>
+                </Tooltip>
+            </Grid>
+
           </Grid>
+          
         </Grid>
     </DrawerTemplateContent>
   );

@@ -104,7 +104,7 @@ Resulting in the following layout:
 
 This plugin implements permissions defined in the plugin-management-configs-common. They are:
 
-| Nome   | Descrição |
+| Name   | Description |
 |--------|-------|
 | manegementconfigs.envs.create  | used to display or hide the "Create" button for the "Env" type |
 | manegementconfigs.envs.delete  | used to display or hide the trash can icon in the actions column of the table for the "Env" type |
@@ -114,7 +114,7 @@ This plugin implements permissions defined in the plugin-management-configs-comm
 | manegementconfigs.secrets.delete  | used to display or hide the trash can icon in the actions column of the table for the "Scret" type |
 
 If you are creating your own backend, it is advisable to use permissions in the backend routes as well.
-And to enable the tab for each config, it is recommended to use the read permission in the `packages/app/src/components/catalog/EntityPage.tsx` file, as in this[exemple](../../packages/app/src/components/catalog/EntityPage.tsx)
+And to enable the tab for each config, it is recommended to use the read permission in the `packages/app/src/components/catalog/EntityPage.tsx` file, as in this [example](../../packages/app/src/components/catalog/EntityPage.tsx)
 
 ## Development
 

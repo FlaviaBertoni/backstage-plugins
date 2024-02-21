@@ -14,8 +14,10 @@ jest.mock('@backstage/core-plugin-api', () => ({
 }));
 
 const mockUpdate = jest.fn();
+const mockGetConfigValue = jest.fn();
 jest.mock('../../hooks/useConfig', () => ({
   useConfigUpdate: () => ({ update: mockUpdate }),
+  useConfigGet: () => ({ getConfigValue: mockGetConfigValue }),
 }));
 
 jest.mock('@backstage/plugin-permission-react', () => ({
@@ -27,14 +29,14 @@ describe('SecretUpdateContent Component', () => {
   const props = {
     isOpen: true,
     toggleDrawer: jest.fn(),
-    item: { key: 'key-name', value: 'value', createdOn: '2023-08-15T10:50:10.000Z', updatedOn: '2023-08-17T15:58:14.000Z' },
+    item: { key: 'key-name', value: 'value', type: 'secret', createdOn: '2023-08-15T10:50:10.000Z', updatedOn: '2023-08-17T15:58:14.000Z' },
     setItem: jest.fn(),
     drawerType: DrawerType.Update, 
     type: ConfigType.Secret
   } as unknown as ItemDrawerProps;
 
   it('should call setItem corretly for all fields', async () => {
-    const { getByLabelText } = render(<SecretUpdateContent {...props}/>);
+    const { getByLabelText, getByTestId } = render(<SecretUpdateContent {...props}/>);
 
     const inputKeyReadOnly = getByLabelText('Key');
     fireEvent.change(inputKeyReadOnly, {target: {value: 'other value'}});
@@ -48,7 +50,8 @@ describe('SecretUpdateContent Component', () => {
     fireEvent.change(inputUpdatedOnReadOnly, {target: { value: 'other value' }});
     expect(props.setItem).not.toHaveBeenCalled();
 
-    const inputValue = getByLabelText('Value');
+    fireEvent.click(getByTestId("edit-button"));
+    const inputValue = getByLabelText('New secret value');
     fireEvent.change(inputValue, {target: {value: 'new value'}});
     expect(props.setItem).toHaveBeenCalledWith({ ...props.item, value: 'new value' });
   });

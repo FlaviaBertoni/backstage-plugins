@@ -1,0 +1,1474 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ManagementConfigs Component should render error panel correctly 1`] = `
+<body>
+  <div
+    aria-atomic="true"
+    aria-live="assertive"
+    id="rbd-announcement-2"
+    style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+  />
+  <div>
+    <div
+      class="MuiPaper-root MuiAccordion-root BackstageWarningPanel-panel-70 BackstageWarningPanel-panel-76 MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
+      role="alert"
+    >
+      <div
+        aria-disabled="false"
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root BackstageWarningPanel-summary-71"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="MuiAccordionSummary-content"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root makeStyles-root-79 makeStyles-root-80"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+            />
+          </svg>
+          <h6
+            class="MuiTypography-root BackstageWarningPanel-summaryText-72 BackstageWarningPanel-summaryText-77 MuiTypography-subtitle1"
+          >
+            Error: Loading error
+          </h6>
+        </div>
+        <div
+          aria-disabled="false"
+          aria-hidden="true"
+          class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root makeStyles-root-79 makeStyles-root-81"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiCollapse-root MuiCollapse-hidden"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner"
+          >
+            <div
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container"
+                >
+                  <div
+                    class="MuiGrid-root BackstageWarningPanel-details-75 MuiGrid-item MuiGrid-grid-xs-12"
+                  >
+                    <ul
+                      class="MuiList-root MuiList-dense MuiList-padding"
+                    >
+                      <li
+                        class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+                      >
+                        <div
+                          class="MuiListItemText-root MuiListItemText-dense MuiListItemText-multiline"
+                        >
+                          <span
+                            class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                          >
+                            Error
+                          </span>
+                          <p
+                            class="MuiTypography-root MuiListItemText-secondary BackstageErrorPanel-text-82 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                          >
+                            Error
+                          </p>
+                        </div>
+                        <button
+                          aria-label="Copy text"
+                          class="MuiButtonBase-root MuiIconButton-root"
+                          tabindex="0"
+                          title="Text copied to clipboard"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4l6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </li>
+                      <li
+                        class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+                      >
+                        <div
+                          class="MuiListItemText-root MuiListItemText-dense MuiListItemText-multiline"
+                        >
+                          <span
+                            class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                          >
+                            Message
+                          </span>
+                          <p
+                            class="MuiTypography-root MuiListItemText-secondary BackstageErrorPanel-text-82 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                          >
+                            Loading error
+                          </p>
+                        </div>
+                        <button
+                          aria-label="Copy text"
+                          class="MuiButtonBase-root MuiIconButton-root"
+                          tabindex="0"
+                          title="Text copied to clipboard"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4l6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </li>
+                      <li
+                        class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+                      >
+                        <div
+                          class="MuiListItemText-root MuiListItemText-dense MuiListItemText-multiline"
+                        >
+                          <span
+                            class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                          >
+                            Stack Trace
+                          </span>
+                          <p
+                            class="MuiTypography-root MuiListItemText-secondary BackstageErrorPanel-text-82 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                          >
+                            Error: Loading error
+    at Object.&lt;anonymous&gt; (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/plugins/management-configs/src/components/ManagementConfigs/ManagementConfigs.test.tsx:62:87)
+    at Promise.then.completed (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/run.js:316:40)
+    at _runTest (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-runner/build/testWorker.js:106:12)
+                          </p>
+                        </div>
+                        <button
+                          aria-label="Copy text"
+                          class="MuiButtonBase-root MuiIconButton-root"
+                          tabindex="0"
+                          title="Text copied to clipboard"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4l6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ManagementConfigs Component should render error panel correctly when type is not founded 1`] = `
+<body>
+  <div
+    aria-atomic="true"
+    aria-live="assertive"
+    id="rbd-announcement-2"
+    style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+  />
+  <div>
+    <div
+      class="MuiPaper-root MuiAccordion-root BackstageWarningPanel-panel-86 BackstageWarningPanel-panel-92 MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
+      role="alert"
+    >
+      <div
+        aria-disabled="false"
+        aria-expanded="false"
+        class="MuiButtonBase-root MuiAccordionSummary-root BackstageWarningPanel-summary-87"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="MuiAccordionSummary-content"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root makeStyles-root-95 makeStyles-root-96"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+            />
+          </svg>
+          <h6
+            class="MuiTypography-root BackstageWarningPanel-summaryText-88 BackstageWarningPanel-summaryText-93 MuiTypography-subtitle1"
+          >
+            Error: Config type not found.
+          </h6>
+        </div>
+        <div
+          aria-disabled="false"
+          aria-hidden="true"
+          class="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root makeStyles-root-95 makeStyles-root-97"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiCollapse-root MuiCollapse-hidden"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner"
+          >
+            <div
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container"
+                >
+                  <div
+                    class="MuiGrid-root BackstageWarningPanel-details-91 MuiGrid-item MuiGrid-grid-xs-12"
+                  >
+                    <ul
+                      class="MuiList-root MuiList-dense MuiList-padding"
+                    >
+                      <li
+                        class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+                      >
+                        <div
+                          class="MuiListItemText-root MuiListItemText-dense MuiListItemText-multiline"
+                        >
+                          <span
+                            class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                          >
+                            Error
+                          </span>
+                          <p
+                            class="MuiTypography-root MuiListItemText-secondary BackstageErrorPanel-text-98 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                          >
+                            Error
+                          </p>
+                        </div>
+                        <button
+                          aria-label="Copy text"
+                          class="MuiButtonBase-root MuiIconButton-root"
+                          tabindex="0"
+                          title="Text copied to clipboard"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4l6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </li>
+                      <li
+                        class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+                      >
+                        <div
+                          class="MuiListItemText-root MuiListItemText-dense MuiListItemText-multiline"
+                        >
+                          <span
+                            class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                          >
+                            Message
+                          </span>
+                          <p
+                            class="MuiTypography-root MuiListItemText-secondary BackstageErrorPanel-text-98 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                          >
+                            Config type not found.
+                          </p>
+                        </div>
+                        <button
+                          aria-label="Copy text"
+                          class="MuiButtonBase-root MuiIconButton-root"
+                          tabindex="0"
+                          title="Text copied to clipboard"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4l6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </li>
+                      <li
+                        class="MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-alignItemsFlexStart"
+                      >
+                        <div
+                          class="MuiListItemText-root MuiListItemText-dense MuiListItemText-multiline"
+                        >
+                          <span
+                            class="MuiTypography-root MuiListItemText-primary MuiTypography-body2 MuiTypography-displayBlock"
+                          >
+                            Stack Trace
+                          </span>
+                          <p
+                            class="MuiTypography-root MuiListItemText-secondary BackstageErrorPanel-text-98 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                          >
+                            Error: Config type not found.
+    at ManagementConfigs (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/plugins/management-configs/src/components/ManagementConfigs/ManagementConfigs.tsx:20:37)
+    at renderWithHooks (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:16305:18)
+    at mountIndeterminateComponent (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:20074:13)
+    at beginWork (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:21587:16)
+    at beginWork$1 (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:27426:14)
+    at performUnitOfWork (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:26560:12)
+    at workLoopSync (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+    at renderRootSync (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:26434:7)
+    at performSyncWorkOnRoot (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:26085:20)
+    at flushSyncCallbacks (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:12042:22)
+    at flushSync (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:26201:7)
+    at legacyCreateRootFromDOMContainer (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:29575:5)
+    at legacyRenderSubtreeIntoContainer (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:29601:12)
+    at Object.render (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react-dom/cjs/react-dom.development.js:29685:10)
+    at render (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/plugins/management-configs/node_modules/@testing-library/react/dist/pure.js:101:25)
+    at act (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/react/cjs/react.development.js:2512:16)
+    at render (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/plugins/management-configs/node_modules/@testing-library/react/dist/pure.js:97:24)
+    at Object.&lt;anonymous&gt; (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/plugins/management-configs/src/components/ManagementConfigs/ManagementConfigs.test.tsx:73:48)
+    at Promise.then.completed (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/run.js:316:40)
+    at _runTest (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/fbertoni/Development/Backstage Plugins /backstage-plugins/node_modules/jest-runner/build/testWorker.js:106:12)
+                          </p>
+                        </div>
+                        <button
+                          aria-label="Copy text"
+                          class="MuiButtonBase-root MuiIconButton-root"
+                          tabindex="0"
+                          title="Text copied to clipboard"
+                          type="button"
+                        >
+                          <span
+                            class="MuiIconButton-label"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              class="MuiSvgIcon-root"
+                              focusable="false"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4l6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="MuiTouchRipple-root"
+                          />
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ManagementConfigs Component should render loading correctly 1`] = `
+<body>
+  <div
+    aria-atomic="true"
+    aria-live="assertive"
+    id="rbd-announcement-2"
+    style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+  />
+  <div>
+    <div
+      class="MuiBox-root MuiBox-root-67"
+    />
+  </div>
+</body>
+`;
+
+exports[`ManagementConfigs Component should render management FeatureFlags correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-direction-xs-column"
+      data-testid="management-featureflags"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-46 BackstageTable-root-45"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
+            style="position: relative; width: 100%;"
+          >
+            <div
+              class="MuiToolbar-root MuiToolbar-regular ForwardRef(MTableToolbarRef)-root-56 BackstageTableToolbar-root-53 MuiToolbar-gutters"
+            >
+              <div
+                class="ForwardRef(MTableToolbarRef)-title-60 BackstageTableToolbar-title-54"
+              >
+                <h2
+                  class="MuiTypography-root MuiTypography-h5"
+                >
+                  Title
+                </h2>
+              </div>
+              <div
+                class="ForwardRef(MTableToolbarRef)-spacer-58"
+              />
+              <div
+                class="MuiFormControl-root MuiTextField-root ForwardRef(MTableToolbarRef)-searchField-61 BackstageTableToolbar-searchField-55"
+              >
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd"
+                >
+                  <div
+                    class="MuiInputAdornment-root MuiInputAdornment-positionStart"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                      focusable="false"
+                      title="Filter"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    aria-invalid="false"
+                    aria-label="Search"
+                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd"
+                    placeholder="Filter"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                  >
+                    <button
+                      aria-label="Clear Search"
+                      class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          aria-label="clear"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ForwardRef(MTableToolbarRef)-actions-59"
+              >
+                <div>
+                  <div
+                    style="display: flex;"
+                  >
+                    <span>
+                      <div
+                        style="display: flex;"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="Component-horizontalScrollContainer-63"
+              style="overflow-x: auto; position: relative;"
+            >
+              <div>
+                <div
+                  style="overflow-y: auto;"
+                >
+                  <div>
+                    <table
+                      class="MuiTable-root"
+                      style="table-layout: auto;"
+                    >
+                      <thead
+                        class="MuiTableHead-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root MuiTableRow-head"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head ForwardRef(MTableHeaderRef)-header-65 BackstageTableHeader-header-64 MuiTableCell-alignLeft"
+                            scope="col"
+                            style="text-transform: uppercase; box-sizing: border-box;"
+                          >
+                            <span
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiTableSortLabel-root"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <div
+                                aria-describedby="rbd-hidden-text-2-hidden-text-9"
+                                data-rbd-drag-handle-context-id="2"
+                                data-rbd-drag-handle-draggable-id="0"
+                                data-rbd-draggable-context-id="2"
+                                data-rbd-draggable-id="0"
+                                draggable="false"
+                                role="button"
+                                tabindex="0"
+                              >
+                                Key
+                              </div>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                                />
+                              </svg>
+                            </span>
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head ForwardRef(MTableHeaderRef)-header-65 BackstageTableHeader-header-64 MuiTableCell-alignLeft"
+                            scope="col"
+                            style="text-transform: uppercase; box-sizing: border-box;"
+                          >
+                            <span
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiTableSortLabel-root"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <div
+                                aria-describedby="rbd-hidden-text-2-hidden-text-9"
+                                data-rbd-drag-handle-context-id="2"
+                                data-rbd-drag-handle-draggable-id="1"
+                                data-rbd-draggable-context-id="2"
+                                data-rbd-draggable-id="1"
+                                draggable="false"
+                                role="button"
+                                tabindex="0"
+                              >
+                                Updated On
+                              </div>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                                />
+                              </svg>
+                            </span>
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head ForwardRef(MTableHeaderRef)-header-65 BackstageTableHeader-header-64 MuiTableCell-alignLeft"
+                            scope="col"
+                            style="text-transform: uppercase; box-sizing: border-box;"
+                          >
+                            <span
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiTableSortLabel-root"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <div
+                                aria-describedby="rbd-hidden-text-2-hidden-text-9"
+                                data-rbd-drag-handle-context-id="2"
+                                data-rbd-drag-handle-draggable-id="2"
+                                data-rbd-draggable-context-id="2"
+                                data-rbd-draggable-id="2"
+                                draggable="false"
+                                role="button"
+                                tabindex="0"
+                              >
+                                Status
+                              </div>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                                />
+                              </svg>
+                            </span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        class="MuiTableBody-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root"
+                          index="0"
+                          level="0"
+                        >
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="APP_KEY_1"
+                          >
+                            APP_KEY_1
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="2023-08-17T15:58:14.000Z"
+                          >
+                            2023-08-17T15:58:14.000Z
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="[object Object]"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              aria-label="enabled"
+                              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary"
+                              data-mui-internal-clone-element="true"
+                              focusable="false"
+                              style="margin-left: 16px;"
+                              viewBox="0 0 24 24"
+                            >
+                              <circle
+                                cx="12"
+                                cy="12"
+                                r="10"
+                              />
+                            </svg>
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root"
+                          index="1"
+                          level="0"
+                        >
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="APP_KEY_2"
+                          >
+                            APP_KEY_2
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="2023-06-08T19:27:05.000Z"
+                          >
+                            2023-06-08T19:27:05.000Z
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="[object Object]"
+                          >
+                            <svg
+                              aria-hidden="true"
+                              aria-label="enabled"
+                              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary"
+                              data-mui-internal-clone-element="true"
+                              focusable="false"
+                              style="margin-left: 16px;"
+                              viewBox="0 0 24 24"
+                            >
+                              <circle
+                                cx="12"
+                                cy="12"
+                                r="10"
+                              />
+                            </svg>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-atomic="true"
+    aria-live="assertive"
+    id="rbd-announcement-2"
+    style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+  />
+  <div
+    id="rbd-hidden-text-2-hidden-text-9"
+    style="display: none;"
+  >
+    
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+
+  </div>
+</body>
+`;
+
+exports[`ManagementConfigs Component should render management envs correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-direction-xs-column"
+      data-testid="management-envs"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-24 BackstageTable-root-23"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
+            style="position: relative; width: 100%;"
+          >
+            <div
+              class="MuiToolbar-root MuiToolbar-regular ForwardRef(MTableToolbarRef)-root-34 BackstageTableToolbar-root-31 MuiToolbar-gutters"
+            >
+              <div
+                class="ForwardRef(MTableToolbarRef)-title-38 BackstageTableToolbar-title-32"
+              >
+                <h2
+                  class="MuiTypography-root MuiTypography-h5"
+                >
+                  Title
+                </h2>
+              </div>
+              <div
+                class="ForwardRef(MTableToolbarRef)-spacer-36"
+              />
+              <div
+                class="MuiFormControl-root MuiTextField-root ForwardRef(MTableToolbarRef)-searchField-39 BackstageTableToolbar-searchField-33"
+              >
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd"
+                >
+                  <div
+                    class="MuiInputAdornment-root MuiInputAdornment-positionStart"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                      focusable="false"
+                      title="Filter"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    aria-invalid="false"
+                    aria-label="Search"
+                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd"
+                    placeholder="Filter"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                  >
+                    <button
+                      aria-label="Clear Search"
+                      class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          aria-label="clear"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ForwardRef(MTableToolbarRef)-actions-37"
+              >
+                <div>
+                  <div
+                    style="display: flex;"
+                  >
+                    <span>
+                      <div
+                        style="display: flex;"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="Component-horizontalScrollContainer-41"
+              style="overflow-x: auto; position: relative;"
+            >
+              <div>
+                <div
+                  style="overflow-y: auto;"
+                >
+                  <div>
+                    <table
+                      class="MuiTable-root"
+                      style="table-layout: auto;"
+                    >
+                      <thead
+                        class="MuiTableHead-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root MuiTableRow-head"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head ForwardRef(MTableHeaderRef)-header-43 BackstageTableHeader-header-42 MuiTableCell-alignLeft"
+                            scope="col"
+                            style="text-transform: uppercase; box-sizing: border-box;"
+                          >
+                            <span
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiTableSortLabel-root"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <div
+                                aria-describedby="rbd-hidden-text-1-hidden-text-5"
+                                data-rbd-drag-handle-context-id="1"
+                                data-rbd-drag-handle-draggable-id="0"
+                                data-rbd-draggable-context-id="1"
+                                data-rbd-draggable-id="0"
+                                draggable="false"
+                                role="button"
+                                tabindex="0"
+                              >
+                                Key
+                              </div>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                                />
+                              </svg>
+                            </span>
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head ForwardRef(MTableHeaderRef)-header-43 BackstageTableHeader-header-42 MuiTableCell-alignLeft"
+                            scope="col"
+                            style="text-transform: uppercase; box-sizing: border-box;"
+                          >
+                            <span
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiTableSortLabel-root"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <div
+                                aria-describedby="rbd-hidden-text-1-hidden-text-5"
+                                data-rbd-drag-handle-context-id="1"
+                                data-rbd-drag-handle-draggable-id="1"
+                                data-rbd-draggable-context-id="1"
+                                data-rbd-draggable-id="1"
+                                draggable="false"
+                                role="button"
+                                tabindex="0"
+                              >
+                                Updated On
+                              </div>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                                />
+                              </svg>
+                            </span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        class="MuiTableBody-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root"
+                          index="0"
+                          level="0"
+                        >
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="APP_KEY_1"
+                          >
+                            APP_KEY_1
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="2023-08-17T15:58:14.000Z"
+                          >
+                            2023-08-17T15:58:14.000Z
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root"
+                          index="1"
+                          level="0"
+                        >
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="APP_KEY_2"
+                          >
+                            APP_KEY_2
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="2023-06-08T19:27:05.000Z"
+                          >
+                            2023-06-08T19:27:05.000Z
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-atomic="true"
+    aria-live="assertive"
+    id="rbd-announcement-1"
+    style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+  />
+  <div
+    id="rbd-hidden-text-1-hidden-text-5"
+    style="display: none;"
+  >
+    
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+
+  </div>
+</body>
+`;
+
+exports[`ManagementConfigs Component should render management secrets correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-direction-xs-column"
+      data-testid="management-secrets"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-2 BackstageTable-root-1"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation2 MuiPaper-rounded"
+            style="position: relative; width: 100%;"
+          >
+            <div
+              class="MuiToolbar-root MuiToolbar-regular ForwardRef(MTableToolbarRef)-root-12 BackstageTableToolbar-root-9 MuiToolbar-gutters"
+            >
+              <div
+                class="ForwardRef(MTableToolbarRef)-title-16 BackstageTableToolbar-title-10"
+              >
+                <h2
+                  class="MuiTypography-root MuiTypography-h5"
+                >
+                  Title
+                </h2>
+              </div>
+              <div
+                class="ForwardRef(MTableToolbarRef)-spacer-14"
+              />
+              <div
+                class="MuiFormControl-root MuiTextField-root ForwardRef(MTableToolbarRef)-searchField-17 BackstageTableToolbar-searchField-11"
+              >
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd"
+                >
+                  <div
+                    class="MuiInputAdornment-root MuiInputAdornment-positionStart"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                      focusable="false"
+                      title="Filter"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    aria-invalid="false"
+                    aria-label="Search"
+                    class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd"
+                    placeholder="Filter"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+                  >
+                    <button
+                      aria-label="Clear Search"
+                      class="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+                      disabled=""
+                      tabindex="-1"
+                      type="button"
+                    >
+                      <span
+                        class="MuiIconButton-label"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          aria-label="clear"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ForwardRef(MTableToolbarRef)-actions-15"
+              >
+                <div>
+                  <div
+                    style="display: flex;"
+                  >
+                    <span>
+                      <div
+                        style="display: flex;"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="Component-horizontalScrollContainer-19"
+              style="overflow-x: auto; position: relative;"
+            >
+              <div>
+                <div
+                  style="overflow-y: auto;"
+                >
+                  <div>
+                    <table
+                      class="MuiTable-root"
+                      style="table-layout: auto;"
+                    >
+                      <thead
+                        class="MuiTableHead-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root MuiTableRow-head"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head ForwardRef(MTableHeaderRef)-header-21 BackstageTableHeader-header-20 MuiTableCell-alignLeft"
+                            scope="col"
+                            style="text-transform: uppercase; box-sizing: border-box;"
+                          >
+                            <span
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiTableSortLabel-root"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <div
+                                aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                                data-rbd-drag-handle-context-id="0"
+                                data-rbd-drag-handle-draggable-id="0"
+                                data-rbd-draggable-context-id="0"
+                                data-rbd-draggable-id="0"
+                                draggable="false"
+                                role="button"
+                                tabindex="0"
+                              >
+                                Key
+                              </div>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                                />
+                              </svg>
+                            </span>
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head ForwardRef(MTableHeaderRef)-header-21 BackstageTableHeader-header-20 MuiTableCell-alignLeft"
+                            scope="col"
+                            style="text-transform: uppercase; box-sizing: border-box;"
+                          >
+                            <span
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiTableSortLabel-root"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <div
+                                aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                                data-rbd-drag-handle-context-id="0"
+                                data-rbd-drag-handle-draggable-id="1"
+                                data-rbd-draggable-context-id="0"
+                                data-rbd-draggable-id="1"
+                                draggable="false"
+                                role="button"
+                                tabindex="0"
+                              >
+                                Created On
+                              </div>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                                />
+                              </svg>
+                            </span>
+                          </th>
+                          <th
+                            class="MuiTableCell-root MuiTableCell-head ForwardRef(MTableHeaderRef)-header-21 BackstageTableHeader-header-20 MuiTableCell-alignLeft"
+                            scope="col"
+                            style="text-transform: uppercase; box-sizing: border-box;"
+                          >
+                            <span
+                              aria-disabled="false"
+                              class="MuiButtonBase-root MuiTableSortLabel-root"
+                              role="button"
+                              tabindex="0"
+                            >
+                              <div
+                                aria-describedby="rbd-hidden-text-0-hidden-text-0"
+                                data-rbd-drag-handle-context-id="0"
+                                data-rbd-drag-handle-draggable-id="2"
+                                data-rbd-draggable-context-id="0"
+                                data-rbd-draggable-id="2"
+                                draggable="false"
+                                role="button"
+                                tabindex="0"
+                              >
+                                Updated On
+                              </div>
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                                />
+                              </svg>
+                            </span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        class="MuiTableBody-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root"
+                          index="0"
+                          level="0"
+                        >
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="APP_KEY_1"
+                          >
+                            APP_KEY_1
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="2023-08-17T15:58:14.000Z"
+                          >
+                            2023-08-17T15:58:14.000Z
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="2023-08-17T15:58:14.000Z"
+                          >
+                            2023-08-17T15:58:14.000Z
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root"
+                          index="1"
+                          level="0"
+                        >
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="APP_KEY_2"
+                          >
+                            APP_KEY_2
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="2023-06-08T19:27:05.000Z"
+                          >
+                            2023-06-08T19:27:05.000Z
+                          </td>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignLeft"
+                            icons="[object Object]"
+                            style="box-sizing: border-box; font-family: inherit; font-weight: inherit;"
+                            value="2023-06-08T19:27:05.000Z"
+                          >
+                            2023-06-08T19:27:05.000Z
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    aria-atomic="true"
+    aria-live="assertive"
+    id="rbd-announcement-0"
+    style="position: absolute; width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; clip-path: inset(100%);"
+  />
+  <div
+    id="rbd-hidden-text-0-hidden-text-0"
+    style="display: none;"
+  >
+    
+  Press space bar to start a drag.
+  When dragging you can use the arrow keys to move the item around and escape to cancel.
+  Some screen readers may require you to be in focus mode or to use your pass through key
+
+  </div>
+</body>
+`;

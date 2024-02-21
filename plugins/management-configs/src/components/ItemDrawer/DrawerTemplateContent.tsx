@@ -23,6 +23,7 @@ type DrawerContentProps = {
   save: () => Promise<void>;
   title: string;
   children: ReactNode;
+  disabledSave?: boolean;
 };
 
 const useDrawerContentStyles = makeStyles((theme: Theme) =>
@@ -53,6 +54,7 @@ const useDrawerContentStyles = makeStyles((theme: Theme) =>
 export const DrawerTemplateContent = ({
     toggleDrawer,
     readOnly = true,
+    disabledSave,
     save,
     loading,
     title,
@@ -89,7 +91,7 @@ export const DrawerTemplateContent = ({
             variant="contained"
             color="primary"
             onClick={() => save()}
-            disabled={readOnly}
+            disabled={readOnly || disabledSave}
           >
             <Box
               sx={{ display: 'flex', minWidth: '45px', justifyContent: 'center' }}
