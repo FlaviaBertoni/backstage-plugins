@@ -14,7 +14,7 @@ Simply follow the contract and implement the backend locally. You can see an exa
 
 ```bash
 # From your Backstage root directory
-yarn --cwd packages/app add @fbertoni/plugin-management-configs
+yarn --cwd packages/app add @fbertoni/backstage-plugin-management-configs
 ```
 
 ### Add the plugin to `packages/app/src/components/catalog/EntityPage.tsx`
@@ -22,7 +22,7 @@ yarn --cwd packages/app add @fbertoni/plugin-management-configs
 Import the `ManagementConfigsContent` component and the `ConfigType` to define what type of configuration should be displayed.
 
 ```bash
-import { ManagementConfigsContent, ConfigType } from '@internal/plugin-management-configs';
+import { ManagementConfigsContent, ConfigType } from '@fbertoni/backstage-plugin-management-configs';
 ```
 
 In the `entityPage`, create an `EntityLayout.Route` with the `path` and `title` of the tab you want to display your configuration, and inside it, add the `ManagementConfigsContent` component with the desired `type`.
@@ -53,7 +53,7 @@ import {
 + isResourceType,
 } from '@backstage/plugin-catalog';
 
-+ import { ManagementConfigsContent, ConfigType } from '@internal/plugin-management-configs';
++ import { ManagementConfigsContent, ConfigType } from '@fbertoni/backstage-plugin-management-configs';
 
 …
 

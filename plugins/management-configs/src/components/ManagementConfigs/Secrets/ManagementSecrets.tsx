@@ -7,7 +7,10 @@ import Button from '@material-ui/core/Button';
 import { Grid } from '@material-ui/core';
 
 import { usePermission } from '@backstage/plugin-permission-react';
-import { manegementConfigsSecretsCreatePermission, manegementConfigsSecretsDeletePermission } from '@internal/plugin-management-configs-common';
+import {
+  manegementConfigsSecretsCreatePermission,
+  manegementConfigsSecretsDeletePermission,
+} from '@fbertoni/backstage-plugin-management-configs-common';
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { ConfigsTable } from '../ConfigsTable';
@@ -22,7 +25,7 @@ type ManagementSecretsProps = {
 };
 
 export const ManagementSecrets = ({ configs, title }: ManagementSecretsProps) => {
-  
+
   const type = ConfigType.Secret;
 
   const [loading, setLoading] = useState(false);
@@ -49,7 +52,7 @@ export const ManagementSecrets = ({ configs, title }: ManagementSecretsProps) =>
   const actionDelete = (config: Config) => ({
     icon: () => <DeleteIcon fontSize="small" />,
     tooltip: 'Delete',
-    onClick: () => { 
+    onClick: () => {
       setItem({ ...config });
       setOpenDialog(true);
     },
@@ -60,7 +63,7 @@ export const ManagementSecrets = ({ configs, title }: ManagementSecretsProps) =>
   if (deletePermission) actions.push(actionDelete);
 
   const deleteConfigWithErrorTratment = async () => {
-    
+
     setLoading(true);
     setOpenDialog(false);
 
@@ -77,30 +80,30 @@ export const ManagementSecrets = ({ configs, title }: ManagementSecretsProps) =>
   };
 
   if (loading) return <Progress />;
-  
+
   return (
     <>
       <Grid container direction="column" spacing={3} data-testid="management-secrets">
         
         {createPermission && <Grid item>
-          <Grid container direction="column" alignContent='flex-end'>
-            <Grid item>
-              <Button 
-                color='primary' 
-                variant='contained' 
-                onClick={() => { setOpenDrawer(true); setDrawerType(DrawerType.Create) }}>
-                Create
-              </Button>
+            <Grid container direction="column" alignContent='flex-end'>
+              <Grid item>
+                <Button
+                  color='primary'
+                  variant='contained'
+                  onClick={() => { setOpenDrawer(true); setDrawerType(DrawerType.Create) }}>
+                  Create
+                </Button>
               </Grid>
-          </Grid>
-        </Grid>}
+            </Grid>
+          </Grid>}
 
         <Grid item >
-          <ConfigsTable 
+          <ConfigsTable
             type={type}
-            configs={configs} 
+            configs={configs}
             actions={actions}
-            title={title} 
+            title={title}
           />
         </Grid>
       </Grid>

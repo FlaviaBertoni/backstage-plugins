@@ -7,7 +7,10 @@ import Button from '@material-ui/core/Button';
 import { Grid } from '@material-ui/core';
 
 import { usePermission } from '@backstage/plugin-permission-react';
-import { manegementConfigsFeatureFlagCreatePermission, manegementConfigsFeatureFlagDeletePermission } from '@internal/plugin-management-configs-common';
+import {
+  manegementConfigsFeatureFlagCreatePermission,
+  manegementConfigsFeatureFlagDeletePermission,
+} from '@fbertoni/backstage-plugin-management-configs-common';
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Config, ConfigType } from '../../hooks/ConfigsContext';
@@ -22,7 +25,7 @@ type ManagementConfigsProps = {
 };
 
 export const ManagementFeatureFlags = ({ configs, title }: ManagementConfigsProps) => {
-  
+
   const type = ConfigType.FeatureFlag;
 
   const [loading, setLoading] = useState(false);
@@ -50,7 +53,7 @@ export const ManagementFeatureFlags = ({ configs, title }: ManagementConfigsProp
   const actionDelete = (config: Config) => ({
     icon: () => <DeleteIcon fontSize="small" />,
     tooltip: 'Delete',
-    onClick: () => { 
+    onClick: () => {
       setItem({ ...config });
       setOpenDialog(true);
     },
@@ -61,7 +64,7 @@ export const ManagementFeatureFlags = ({ configs, title }: ManagementConfigsProp
   if (deletePermission) actions.push(actionDelete);
 
   const deleteConfigWithErrorTratment = async () => {
-    
+
     setLoading(true);
     setOpenDialog(false);
 
@@ -78,30 +81,30 @@ export const ManagementFeatureFlags = ({ configs, title }: ManagementConfigsProp
   };
 
   if (loading) return <Progress />;
-  
+
   return (
     <>
       <Grid container direction="column" spacing={3} data-testid="management-featureflags">
         
         {createPermission && <Grid item>
-          <Grid container direction="column" alignContent='flex-end'>
-            <Grid item>
-              <Button 
-                color='primary' 
-                variant='contained' 
-                onClick={() => { setOpenDrawer(true); setDrawerType(DrawerType.Create) }}>
-                Create
-              </Button>
+            <Grid container direction="column" alignContent='flex-end'>
+              <Grid item>
+                <Button
+                  color='primary'
+                  variant='contained'
+                  onClick={() => { setOpenDrawer(true); setDrawerType(DrawerType.Create) }}>
+                  Create
+                </Button>
               </Grid>
-          </Grid>
-        </Grid>}
+            </Grid>
+          </Grid>}
 
         <Grid item >
-          <ConfigsTable 
+          <ConfigsTable
             type={type}
-            configs={configs} 
+            configs={configs}
             actions={actions}
-            title={title} 
+            title={title}
           />
         </Grid>
       </Grid>

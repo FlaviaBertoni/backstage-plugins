@@ -4,7 +4,9 @@ import { Table } from '@backstage/core-components';
 import { Action } from '@material-table/core';
 
 import { Config, ConfigType } from '../hooks/ConfigsContext';
-import { tableEnvConfiguration, tableFeatureFlagConfiguration, tableSecretConfiguration } from './';
+import { tableEnvConfiguration } from './Env/tableConfiguration';
+import { tableFeatureFlagConfiguration } from './FeatureFlag/tableConfiguration';
+import { tableSecretConfiguration } from './Secrets/tableConfiguration';
 
 type ConfigsTableProps = {
     configs: Config[] | EnvDataTable[];

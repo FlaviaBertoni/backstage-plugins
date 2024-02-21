@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { usePermission } from '@backstage/plugin-permission-react';
-import { manegementConfigsEnvsCreatePermission } from '@internal/plugin-management-configs-common';
+import { manegementConfigsEnvsCreatePermission } from '@fbertoni/backstage-plugin-management-configs-common';
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Grid } from '@material-ui/core';
@@ -66,35 +66,35 @@ export const EnvUpdateContent = (props: ItemDrawerProps) => {
         </Grid>
 
         { item.createdOn && <Grid item>
-          <TextField
-            id="item-createdOn"
-            fullWidth
-            label="Created On"
-            value={item.createdOn}
-            InputProps={{ readOnly: true }}
-          />
-        </Grid>}
+            <TextField
+              id="item-createdOn"
+              fullWidth
+              label="Created On"
+              value={item.createdOn}
+              InputProps={{ readOnly: true }}
+            />
+          </Grid>}
 
         { item.updatedOn && <Grid item>
-          <TextField
-            id="item-updatedOn"
-            fullWidth
-            label="Updated On"
-            value={item.updatedOn}
-            InputProps={{ readOnly: true }}
-          />
-        </Grid>}
+            <TextField
+              id="item-updatedOn"
+              fullWidth
+              label="Updated On"
+              value={item.updatedOn}
+              InputProps={{ readOnly: true }}
+            />
+          </Grid>}
 
         <Grid item>
           <TextField
-              id="item-value"
-              fullWidth
-              multiline
-              label="Value"
-              value={item.value || ''}
-              rows={4}
-              InputProps={{ readOnly }}
-              onChange={(e) =>
+            id="item-value"
+            fullWidth
+            multiline
+            label="Value"
+            value={item.value || ''}
+            rows={4}
+            InputProps={{ readOnly }}
+            onChange={(e) =>
                 setItem({ ...item, value: e.target.value })
               }
           />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { usePermission } from '@backstage/plugin-permission-react';
-import { manegementConfigsFeatureFlagCreatePermission } from '@internal/plugin-management-configs-common';
+import { manegementConfigsFeatureFlagCreatePermission } from '@fbertoni/backstage-plugin-management-configs-common';
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Grid } from '@material-ui/core';
@@ -68,28 +68,28 @@ export const FeatureFlagUpdateContent = (props: ItemDrawerProps) => {
         </Grid>
 
         {item.createdOn && <Grid item>
-          <TextField
-            id="item-createdOn"
-            fullWidth
-            label="Created On"
-            value={item.createdOn}
-            InputProps={{ readOnly: true }}
-          />
-        </Grid>}
+            <TextField
+              id="item-createdOn"
+              fullWidth
+              label="Created On"
+              value={item.createdOn}
+              InputProps={{ readOnly: true }}
+            />
+          </Grid>}
 
         {item.updatedOn && <Grid item>
-          <TextField
-            id="item-updatedOn"
-            fullWidth
-            label="Updated On"
-            value={item.updatedOn}
-            InputProps={{ readOnly: true }}
-          />
-        </Grid>}
+            <TextField
+              id="item-updatedOn"
+              fullWidth
+              label="Updated On"
+              value={item.updatedOn}
+              InputProps={{ readOnly: true }}
+            />
+          </Grid>}
 
         <Grid item>
           <FormControlLabel
-            disabled={readOnly}              
+            disabled={readOnly}
             label={item.value ? 'Enabled' : 'Disabled'}
             control={
               <Switch

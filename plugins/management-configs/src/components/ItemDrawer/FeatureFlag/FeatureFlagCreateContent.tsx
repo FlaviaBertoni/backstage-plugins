@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { usePermission } from '@backstage/plugin-permission-react';
-import { manegementConfigsFeatureFlagCreatePermission } from '@internal/plugin-management-configs-common';
+import { manegementConfigsFeatureFlagCreatePermission } from '@fbertoni/backstage-plugin-management-configs-common';
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Grid } from '@material-ui/core';
@@ -32,7 +32,7 @@ export const FeatureFlagCreateContent = (props: ItemDrawerProps) => {
   const readOnly = !createPermissionResult?.allowed;
 
   const save = async () => {
-    
+
     try {
 
       if (!item.key) setError({ ...error, key: 'required field' });
@@ -65,38 +65,38 @@ export const FeatureFlagCreateContent = (props: ItemDrawerProps) => {
       save={save}
       loading={loading}
     >
-        <Grid container spacing={3} direction="column" data-testid="feature-flag-create-content">
-          <Grid item>
-            <TextField
-              id="item-key"
-              required
-              fullWidth
-              label="Key"
-              value={item.key}
-              InputProps={{ readOnly }}
-              onChange={e => setItem({ ...item, key: e.target.value })}
-              onFocus={() => setError({ ...error, key: '' }) }
-              error={!!error.key}
-              helperText={error.key}
-            />
-          </Grid>
-
-          <Grid item>
-            <FormControlLabel
-              disabled={readOnly}              
-              label={item.value ? 'Enabled' : 'Disabled'}
-              control={
-                <Switch
-                  id="item-value"
-                  checked={Boolean(item.value)}
-                  onChange={e => {
-                    setItem({ ...item, value: e.target.checked })}
-                  }
-                />
-              }
-            />
-          </Grid>
+      <Grid container spacing={3} direction="column" data-testid="feature-flag-create-content">
+        <Grid item>
+          <TextField
+            id="item-key"
+            required
+            fullWidth
+            label="Key"
+            value={item.key}
+            InputProps={{ readOnly }}
+            onChange={e => setItem({ ...item, key: e.target.value })}
+            onFocus={() => setError({ ...error, key: '' }) }
+            error={!!error.key}
+            helperText={error.key}
+          />
         </Grid>
-      </DrawerTemplateContent>
+
+        <Grid item>
+          <FormControlLabel
+            disabled={readOnly}
+            label={item.value ? 'Enabled' : 'Disabled'}
+            control={
+              <Switch
+                id="item-value"
+                checked={Boolean(item.value)}
+                onChange={e => {
+                  setItem({ ...item, value: e.target.checked })}
+                  }
+              />
+            }
+          />
+        </Grid>
+      </Grid>
+    </DrawerTemplateContent>
   );
 };

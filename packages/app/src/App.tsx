@@ -33,7 +33,7 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
-import { ManagementConfigsPage } from '@internal/plugin-management-configs';
+import { ManagementConfigsPage } from '@fbertoni/backstage-plugin-management-configs';
 
 const app = createApp({
   apis,

@@ -60,8 +60,12 @@ import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 
 import { RequirePermission } from '@backstage/plugin-permission-react';
-import { ManagementConfigsContent, ConfigType } from '@internal/plugin-management-configs';
-import { manegementConfigsEnvsReadPermission, manegementConfigsFeatureFlagReadPermission, manegementConfigsSecretsReadPermission } from '@internal/plugin-management-configs-common';
+import { ManagementConfigsContent, ConfigType } from '@fbertoni/backstage-plugin-management-configs';
+import {
+  manegementConfigsEnvsReadPermission,
+  manegementConfigsFeatureFlagReadPermission,
+  manegementConfigsSecretsReadPermission,
+} from '@fbertoni/backstage-plugin-management-configs-common';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -384,19 +388,28 @@ const domainPage = (
 
 const managementSecretsContent = (
   <RequirePermission permission={manegementConfigsSecretsReadPermission}>
-    <ManagementConfigsContent title="KeyVault Secret List" type={ConfigType.Secret} />
+    <ManagementConfigsContent
+      title="KeyVault Secret List"
+      type={ConfigType.Secret}
+    />
   </RequirePermission>
 );
 
 const managementEnvContent = (
   <RequirePermission permission={manegementConfigsEnvsReadPermission}>
-    <ManagementConfigsContent title="AppConfiguration Env List" type={ConfigType.Env} />
+    <ManagementConfigsContent
+      title="AppConfiguration Env List"
+      type={ConfigType.Env}
+    />
   </RequirePermission>
 );
 
 const managementFeatureFlagContent = (
   <RequirePermission permission={manegementConfigsFeatureFlagReadPermission}>
-    <ManagementConfigsContent title="AppConfiguration FeatureFlag List" type={ConfigType.FeatureFlag} />
+    <ManagementConfigsContent
+      title="AppConfiguration FeatureFlag List"
+      type={ConfigType.FeatureFlag}
+    />
   </RequirePermission>
 );
 
@@ -406,15 +419,27 @@ const resourcePage = (
       {overviewContent}
     </EntityLayout.Route>
 
-    <EntityLayout.Route if={isResourceType('keyvault')} path="/management-secrets" title="Secrets">
+    <EntityLayout.Route
+      if={isResourceType('keyvault')}
+      path="/management-secrets"
+      title="Secrets"
+    >
       {managementSecretsContent}
     </EntityLayout.Route>
 
-    <EntityLayout.Route if={isResourceType('appconfiguration')} path="/management-envs" title="Envs">
+    <EntityLayout.Route
+      if={isResourceType('appconfiguration')}
+      path="/management-envs"
+      title="Envs"
+    >
       {managementEnvContent}
     </EntityLayout.Route>
 
-    <EntityLayout.Route if={isResourceType('appconfiguration')} path="/management-featureflags" title="Feature Flags">
+    <EntityLayout.Route
+      if={isResourceType('appconfiguration')}
+      path="/management-featureflags"
+      title="Feature Flags"
+    >
       {managementFeatureFlagContent}
     </EntityLayout.Route>
   </EntityLayout>

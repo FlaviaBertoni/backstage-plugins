@@ -1,7 +1,8 @@
-import { createServiceBuilder } from '@backstage/backend-common';
+import { createServiceBuilder, loadBackendConfig, SingleHostDiscovery, ServerTokenManager } from '@backstage/backend-common';
 import { Server } from 'http';
 import { Logger } from 'winston';
 import { createRouter } from './router';
+import { ServerPermissionClient } from '@backstage/plugin-permission-node';
 
 export interface ServerOptions {
   port: number;
@@ -14,8 +15,18 @@ export async function startStandaloneServer(
 ): Promise<Server> {
   const logger = options.logger.child({ service: 'management-configs-backend' });
   logger.debug('Starting application server...');
+  const config = await loadBackendConfig({ logger, argv: process.argv });
+  const discovery = SingleHostDiscovery.fromConfig(config);
+  const tokenManager = ServerTokenManager.fromConfig(config, {
+    logger,
+  });
+  const permissions = ServerPermissionClient.fromConfig(config, {
+    discovery,
+    tokenManager,
+  });
   const router = await createRouter({
     logger,
+    permissions
   });
 
   let service = createServiceBuilder(module)

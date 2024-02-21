@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { usePermission } from '@backstage/plugin-permission-react';
-import { manegementConfigsSecretsCreatePermission } from '@internal/plugin-management-configs-common';
+import { manegementConfigsSecretsCreatePermission } from '@fbertoni/backstage-plugin-management-configs-common';
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Grid } from '@material-ui/core';
@@ -30,7 +30,7 @@ export const SecretCreateContent = (props: ItemDrawerProps) => {
   const readOnly = !createPermissionResult?.allowed;
 
   const save = async () => {
-    
+
     try {
 
       if (!item.key) setError({ ...error, key: 'required field' });
@@ -63,37 +63,37 @@ export const SecretCreateContent = (props: ItemDrawerProps) => {
       save={save}
       loading={loading}
     >
-        <Grid container spacing={3} direction="column" data-testid="secret-create-content">
-          <Grid item>
-            <TextField
-              id="item-key"
-              required
-              fullWidth
-              label="Key"
-              value={item.key}
-              InputProps={{ readOnly }}
-              onChange={e => setItem({ ...item, key: e.target.value })}
-              onFocus={() => setError({ ...error, key: '' }) }
-              error={!!error.key}
-              helperText={error.key}
-            />
-          </Grid>
+      <Grid container spacing={3} direction="column" data-testid="secret-create-content">
+        <Grid item>
+          <TextField
+            id="item-key"
+            required
+            fullWidth
+            label="Key"
+            value={item.key}
+            InputProps={{ readOnly }}
+            onChange={e => setItem({ ...item, key: e.target.value })}
+            onFocus={() => setError({ ...error, key: '' }) }
+            error={!!error.key}
+            helperText={error.key}
+          />
+        </Grid>
 
-          <Grid item>
-            <TextField
-              id="item-value"
-              fullWidth
-              multiline
-              label="Value"
-              value={item.value || ''}
-              rows={4}
-              InputProps={{ readOnly }}
-              onChange={(e) =>
+        <Grid item>
+          <TextField
+            id="item-value"
+            fullWidth
+            multiline
+            label="Value"
+            value={item.value || ''}
+            rows={4}
+            InputProps={{ readOnly }}
+            onChange={(e) =>
                 setItem({ ...item, value: e.target.value })
               }
-            />
-          </Grid>
+          />
         </Grid>
-      </DrawerTemplateContent>
+      </Grid>
+    </DrawerTemplateContent>
   );
 };

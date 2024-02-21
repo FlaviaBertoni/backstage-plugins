@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
 import { usePermission } from '@backstage/plugin-permission-react';
-import { manegementConfigsSecretsCreatePermission, manegementConfigsSecretsShowValuePermission } from '@internal/plugin-management-configs-common';
+import {
+  manegementConfigsSecretsCreatePermission,
+  manegementConfigsSecretsShowValuePermission,
+} from '@fbertoni/backstage-plugin-management-configs-common';
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Grid, Button } from '@material-ui/core';
@@ -97,7 +100,7 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
       setLoading(false);
       alertApi.post({
         message: `Error on save: ${e?.message}`,
-        severity: 'error'
+        severity: 'error',
       });
     }
   };
@@ -108,7 +111,7 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
       fullWidth
       label="Value"
       value={value}
-      InputProps={{ 
+      InputProps={{
         readOnly: true,
         endAdornment: showSecretValueAllowed && (
           <InputAdornment position="end">
@@ -135,9 +138,7 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
       label="New secret value"
       value={item.value}
       rows={3}
-      onChange={(e) =>
-        setItem({ ...item, value: e.target.value })
-      }
+      onChange={e => setItem({ ...item, value: e.target.value })}
     />
   );
 
@@ -152,18 +153,18 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
       loading={loading}
       disabledSave={!item.value}
     >
-        <Grid container spacing={3} direction="column" data-testid="secret-update-content">
-          <Grid item>
-            <TextField
-              id="item-key"
-              fullWidth
-              label="Key"
-              value={item.key}
-              InputProps={{ readOnly: true }}
-            />
-          </Grid>
+      <Grid container spacing={3} direction="column" data-testid="secret-update-content">
+        <Grid item>
+          <TextField
+            id="item-key"
+            fullWidth
+            label="Key"
+            value={item.key}
+            InputProps={{ readOnly: true }}
+          />
+        </Grid>
 
-          { item.createdOn && <Grid item>
+        { item.createdOn && <Grid item>
             <TextField
               id="item-createdOn"
               fullWidth
@@ -173,7 +174,7 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
             />
           </Grid>}
 
-          { item.updatedOn && <Grid item>
+        { item.updatedOn && <Grid item>
             <TextField
               id="item-updatedOn"
               fullWidth
@@ -183,31 +184,31 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
             />
           </Grid>}
 
-          <Grid item container spacing={1}>
-     
-            <Grid item xs={10}>
-              {editing ? EditInput : ReadInput }
-            </Grid>
+        <Grid item container spacing={1}>
 
-            <Grid item xs justifyContent="flex-end" alignItems="center">
-                <Tooltip title={editing ? "Cancel editing" : "Edit value"}>
-                  <Button
-                    data-testid="edit-button"
-                    aria-label="edit value"
-                    onClick={handleEditValue}
-                    variant="outlined"
-                    color="primary"
-                    style={{ height: '100%' }}
-                    fullWidth
-                  >
-                    { editing ? <CancelIcon /> : <EditIcon /> }
-                  </Button>
-                </Tooltip>
-            </Grid>
-
+          <Grid item xs={10}>
+            {editing ? EditInput : ReadInput }
           </Grid>
-          
-        </Grid>
+
+          <Grid item xs justifyContent="flex-end" alignItems="center">
+            <Tooltip title={editing ? "Cancel editing" : "Edit value"}>
+              <Button
+                data-testid="edit-button"
+                aria-label="edit value"
+                onClick={handleEditValue}
+                variant="outlined"
+                color="primary"
+                style={{ height: '100%' }}
+                fullWidth
+              >
+                { editing ? <CancelIcon /> : <EditIcon /> }
+              </Button>
+            </Tooltip>
+          </Grid>
+        
+          </Grid>
+
+      </Grid>
     </DrawerTemplateContent>
   );
 };
