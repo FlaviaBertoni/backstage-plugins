@@ -95,9 +95,21 @@ export const entityPage = (
 
 Resulting in the following layout:
 
-![Management Screts](docs/management-screts.png)
-![Management Envs](docs/management-envs.png)
-![Management Feature Flags](docs/management-feature-flags.png)
+**Secrets**
+
+![Management Secrets](docs/secrets-management.png)
+![Details Secrets](docs/secrets-edit.png)
+![Edit Secrets](docs/secrets-edit-save.png)
+![Create Secrets](docs/secrets-create.png)
+![Delete Secrets](docs/secrets-delete.png)
+
+**Envs**
+![Management Envs](docs/envs-management.png)
+![Details and Edit Env](docs/envs-edit.png)
+
+**Feature Flags**
+![Management Feature Flags](docs/featureflags-management.png)
+![Details and Edit Feature Flags](docs/featureflags-edit.png)
 
 
 ## Permissions
