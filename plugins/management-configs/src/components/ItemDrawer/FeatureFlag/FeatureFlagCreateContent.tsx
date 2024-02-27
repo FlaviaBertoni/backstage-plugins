@@ -6,8 +6,8 @@ import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Grid } from '@material-ui/core';
 import TextField from '@mui/material/TextField';
-import Switch from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 
 import { Config } from '../../hooks';
 import { useConfigCreate } from '../../hooks/useConfig';
@@ -90,7 +90,7 @@ export const FeatureFlagCreateContent = (props: ItemDrawerProps) => {
                 id="item-value"
                 checked={Boolean(item.value)}
                 onChange={e => {
-                  setItem({ ...item, value: e.target.checked })}
+                    setItem({ ...item, value: e.target.checked })}
                   }
               />
             }

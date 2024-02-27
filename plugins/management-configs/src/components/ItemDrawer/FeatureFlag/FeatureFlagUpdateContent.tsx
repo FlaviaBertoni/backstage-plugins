@@ -6,8 +6,8 @@ import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Grid } from '@material-ui/core';
 import TextField from '@mui/material/TextField';
-import Switch from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@material-ui/core/Switch';
 
 import { useConfigUpdate } from '../../hooks/useConfig';
 
