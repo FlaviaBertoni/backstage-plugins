@@ -25,46 +25,55 @@ const exampleScrets = [
     key: 'APP-CONNECTION-STRING',
     createdOn: '2023-08-08T19:27:05.000Z',
     updatedOn: '2023-08-08T19:27:05.000Z',
+    editable: false,
   },
   {
     key: 'database',
     createdOn: '2023-08-07T18:58:52.000Z',
     updatedOn: '2023-08-07T18:58:52.000Z',
+    editable: true,
   },
   {
     key: 'event-hub-connection-string',
     createdOn: '2023-08-16T13:50:17.000Z',
     updatedOn: '2023-08-16T13:50:17.000Z',
+    editable: true,
   },
   {
     key: 'event-hub-namespace',
     createdOn: '2023-08-01T17:00:46.000Z',
     updatedOn: '2023-08-01T17:00:46.000Z',
+    editable: true,
   },
   {
     key: 'event-hub-token',
     createdOn: '2023-08-16T14:56:23.000Z',
     updatedOn: '2023-08-16T14:56:23.000Z',
+    editable: true,
   },
   {
     key: 'redis',
     createdOn: '2023-08-01T12:19:25.000Z',
     updatedOn: '2023-08-01T12:19:25.000Z',
+    editable: true,
   },
   {
     key: 'sessionmanager',
     createdOn: '2023-08-15T18:27:26.000Z',
     updatedOn: '2023-08-15T18:27:26.000Z',
+    editable: true,
   },
   {
     key: 'storage-connection-string',
     createdOn: '2023-08-01T12:28:38.000Z',
     updatedOn: '2023-08-01T12:28:38.000Z',
+    editable: false,
   },
   {
     key: 'storage-name',
     createdOn: '2023-08-01T12:28:38.000Z',
     updatedOn: '2023-08-01T12:28:38.000Z',
+    editable: false,
   },
 ];
 
@@ -145,7 +154,7 @@ export async function createRouter(
   });
 
   router.put('/:namespace/:name', async (req, response) => {
-
+    
     const token = getBearerTokenFromAuthorizationHeader(
       req.header('authorization'),
     );

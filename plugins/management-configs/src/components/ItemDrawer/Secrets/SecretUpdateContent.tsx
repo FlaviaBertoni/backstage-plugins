@@ -38,10 +38,11 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
   const createPermissionResult = usePermission({ permission: manegementConfigsSecretsCreatePermission });
   const showSecretValuePermissionResult = usePermission({ permission: manegementConfigsSecretsShowValuePermission });
 
-  const readOnly = !createPermissionResult?.allowed;
+  const item = { type: props.type, ...props.item } as Config;
+
+  const readOnly = !createPermissionResult?.allowed || item.editable === false;
   const showSecretValueAllowed = showSecretValuePermissionResult?.allowed;
 
-  const item = { type: props.type, ...props.item } as Config;
   if (!item || !setItem) {
     alertApi.post({
       message: `Error on load config: item or setItem is undefined.`,
@@ -186,11 +187,11 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
 
         <Grid item container spacing={1}>
 
-          <Grid item xs={10}>
+          <Grid item xs={readOnly ? 12 : 10}>
             {editing ? EditInput : ReadInput }
           </Grid>
 
-          <Grid item xs justifyContent="flex-end" alignItems="center">
+          { !readOnly && <Grid item xs justifyContent="flex-end" alignItems="center">
             <Tooltip title={editing ? "Cancel editing" : "Edit value"}>
               <Button
                 data-testid="edit-button"
@@ -204,7 +205,7 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
                 { editing ? <CancelIcon /> : <EditIcon /> }
               </Button>
             </Tooltip>
-          </Grid>
+          </Grid>}
         
           </Grid>
 

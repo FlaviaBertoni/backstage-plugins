@@ -17,6 +17,7 @@ export type Config = {
   type?: ConfigType;
   value?: string | boolean;
   columnStatus?: React.JSX.Element;
+  editable?: boolean;
 };
 
 interface ConfigsContextProps {

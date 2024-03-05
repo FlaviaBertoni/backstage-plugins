@@ -21,7 +21,7 @@ export const FeatureFlagUpdateContent = (props: ItemDrawerProps) => {
   const alertApi = useApi(alertApiRef);
   const { update } = useConfigUpdate();
   const createPermissionResult = usePermission({ permission: manegementConfigsFeatureFlagCreatePermission });
-  const readOnly = !createPermissionResult?.allowed;
+  const readOnly = !createPermissionResult?.allowed || item?.editable === false;
 
   if (!item || !setItem) {
     alertApi.post({
