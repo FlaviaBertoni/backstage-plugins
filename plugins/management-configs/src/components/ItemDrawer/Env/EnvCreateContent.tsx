@@ -5,7 +5,7 @@ import { manegementConfigsEnvsCreatePermission } from '@fbertoni/backstage-plugi
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Grid } from '@material-ui/core';
-import TextField from '@mui/material/TextField';
+import TextField from '@material-ui/core/TextField';
 
 import { Config } from '../../hooks';
 import { useConfigCreate } from '../../hooks/useConfig';
@@ -68,6 +68,7 @@ export const EnvCreateContent = (props: ItemDrawerProps) => {
             required
             fullWidth
             label="Key"
+            variant="outlined"
             value={item.key}
             InputProps={{ readOnly }}
             onChange={e => setItem({ ...item, key: e.target.value })}
@@ -83,8 +84,9 @@ export const EnvCreateContent = (props: ItemDrawerProps) => {
             fullWidth
             multiline
             label="Value"
+            variant="outlined"
             value={item.value || ''}
-            rows={4}
+            minRows={4}
             InputProps={{ readOnly }}
             onChange={(e) =>
                 setItem({ ...item, value: e.target.value })

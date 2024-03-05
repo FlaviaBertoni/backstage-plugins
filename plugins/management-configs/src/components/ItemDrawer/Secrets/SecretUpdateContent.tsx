@@ -8,10 +8,10 @@ import {
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Grid, Button } from '@material-ui/core';
-import TextField from '@mui/material/TextField';
-import InputAdornment from '@mui/material/InputAdornment';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
+import TextField from '@material-ui/core/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import EditIcon from '@material-ui/icons/Edit';
@@ -23,7 +23,7 @@ import { ItemDrawerProps } from '../ItemDrawer';
 import { DrawerTemplateContent } from '../DrawerTemplateContent';
 import { Config } from '../../hooks/ConfigsContext';
 
-const DEFAULT_SECRET_HIDE_VALUE = "************************";
+const DEFAULT_SECRET_HIDE_VALUE = '************************';
 
 export const SecretUpdateContent = (props: ItemDrawerProps) => {
   const { toggleDrawer, setItem } = props;
@@ -35,8 +35,12 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
   const alertApi = useApi(alertApiRef);
   const { update } = useConfigUpdate();
   const { getConfigValue } = useConfigGet();
-  const createPermissionResult = usePermission({ permission: manegementConfigsSecretsCreatePermission });
-  const showSecretValuePermissionResult = usePermission({ permission: manegementConfigsSecretsShowValuePermission });
+  const createPermissionResult = usePermission({
+    permission: manegementConfigsSecretsCreatePermission,
+  });
+  const showSecretValuePermissionResult = usePermission({
+    permission: manegementConfigsSecretsShowValuePermission,
+  });
 
   const item = { type: props.type, ...props.item } as Config;
 
@@ -53,7 +57,6 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
   }
 
   const handleClickShow = async () => {
-
     const showValue = !showSecretValue;
 
     if (showValue) {
@@ -65,7 +68,7 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
         alertApi.post({
           message: `Error on get secret value: ${e?.message}`,
           severity: 'error',
-          display: 'transient'
+          display: 'transient',
         });
       } finally {
         setLoading(false);
@@ -75,7 +78,7 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
 
     setValue(DEFAULT_SECRET_HIDE_VALUE);
     setShowSecretValue(showValue);
-  }
+  };
 
   const handleMouseDownShow = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -112,6 +115,7 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
       fullWidth
       label="Value"
       value={value}
+      variant="outlined"
       InputProps={{
         readOnly: true,
         endAdornment: showSecretValueAllowed && (
@@ -126,7 +130,7 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
               {showSecretValue ? <VisibilityIcon /> : <VisibilityOffIcon />}
             </IconButton>
           </InputAdornment>
-        )
+        ),
       }}
     />
   );
@@ -138,7 +142,8 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
       multiline
       label="New secret value"
       value={item.value}
-      rows={3}
+      variant="outlined"
+      minRows={3}
       onChange={e => setItem({ ...item, value: e.target.value })}
     />
   );
@@ -154,61 +159,72 @@ export const SecretUpdateContent = (props: ItemDrawerProps) => {
       loading={loading}
       disabledSave={!item.value}
     >
-      <Grid container spacing={3} direction="column" data-testid="secret-update-content">
+      <Grid
+        container
+        spacing={3}
+        direction="column"
+        data-testid="secret-update-content"
+      >
         <Grid item>
           <TextField
             id="item-key"
             fullWidth
             label="Key"
+            variant="outlined"
             value={item.key}
             InputProps={{ readOnly: true }}
           />
         </Grid>
 
-        { item.createdOn && <Grid item>
+        {item.createdOn && (
+          <Grid item>
             <TextField
               id="item-createdOn"
               fullWidth
               label="Created On"
+              variant="outlined"
               value={item.createdOn}
               InputProps={{ readOnly: true }}
             />
-          </Grid>}
+          </Grid>
+        )}
 
-        { item.updatedOn && <Grid item>
+        {item.updatedOn && (
+          <Grid item>
             <TextField
               id="item-updatedOn"
               fullWidth
               label="Updated On"
+              variant="outlined"
               value={item.updatedOn}
               InputProps={{ readOnly: true }}
             />
-          </Grid>}
+          </Grid>
+        )}
 
         <Grid item container spacing={1}>
-
           <Grid item xs={readOnly ? 12 : 10}>
-            {editing ? EditInput : ReadInput }
+            {editing ? EditInput : ReadInput}
           </Grid>
 
-          { !readOnly && <Grid item xs justifyContent="flex-end" alignItems="center">
-            <Tooltip title={editing ? "Cancel editing" : "Edit value"}>
-              <Button
-                data-testid="edit-button"
-                aria-label="edit value"
-                onClick={handleEditValue}
-                variant="outlined"
-                color="primary"
-                style={{ height: '100%' }}
-                fullWidth
-              >
-                { editing ? <CancelIcon /> : <EditIcon /> }
-              </Button>
-            </Tooltip>
-          </Grid>}
-        
-          </Grid>
-
+          {!readOnly && (
+            <Grid item xs>
+              <Tooltip title={editing ? 'Cancel editing' : 'Edit value'}>
+                <Button
+                  data-testid="edit-button"
+                  aria-label="edit value"
+                  onClick={handleEditValue}
+                  variant="outlined"
+                  color="primary"
+                  style={{ height: '100%' }}
+                  fullWidth
+                >
+                  {editing ? <CancelIcon /> : <EditIcon />}
+                </Button>
+              </Tooltip>
+            </Grid>
+          )}
+        </Grid>
       </Grid>
     </DrawerTemplateContent>
   );

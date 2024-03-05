@@ -5,7 +5,7 @@ import { manegementConfigsFeatureFlagCreatePermission } from '@fbertoni/backstag
 import { alertApiRef, useApi } from '@backstage/core-plugin-api';
 
 import { Grid } from '@material-ui/core';
-import TextField from '@mui/material/TextField';
+import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 
@@ -72,6 +72,7 @@ export const FeatureFlagCreateContent = (props: ItemDrawerProps) => {
             required
             fullWidth
             label="Key"
+            variant="outlined"
             value={item.key}
             InputProps={{ readOnly }}
             onChange={e => setItem({ ...item, key: e.target.value })}
